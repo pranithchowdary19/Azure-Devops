@@ -1,0 +1,24 @@
+Creating the azure account:- requirements
+
+1. New mail id(Outlook)
+2. Credit card or Debit card(Only some debits cards are accepted)
+3. In this process 2 Ruppess are dedected from your card and witin 72 hours it will credited again to your account.
+
+
+Note:- On-Prem means (Non Cloud)
+
+Azure Active directory:-
+
+1. Create a user accounts.
+2. Manage user accounts.
+3. Assign licenses to users and groups.
+4. Reset the passwords.
+5. Deploy any software.
+
+---> Identify the management capabilites that enables you to securely manage access to axure services and resources for your users.
+
+Azure Active directory editions:-
+1. Free
+2. Microsoft 365 services
+3. Premium P1
+4. Premium P2
