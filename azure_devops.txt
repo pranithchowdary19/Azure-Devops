@@ -7,6 +7,8 @@ Creating the azure account:- requirements
 
 Note:- On-Prem means (Non Cloud)
 
+---> After creating the azure account, if we want to see the subscription status then go to search bar and search for subscription.
+
 Azure Active directory:-
 
 1. Create a user accounts.
@@ -15,10 +17,50 @@ Azure Active directory:-
 4. Reset the passwords.
 5. Deploy any software.
 
----> Identify the management capabilites that enables you to securely manage access to axure services and resources for your users.
+---> Identify the management capabilites that enables you to securely manage access to azure services and resources for your users.
 
 Azure Active directory editions:-
 1. Free
 2. Microsoft 365 services
 3. Premium P1
 4. Premium P2
+
+Creating the Azure User :-
+
+1. Login to azure ---> Goto search and type azure active directory.
+
+2. On leftside we find manage tab on that there is users option.
+
+3. Open users tab and we find new user press that and we find to options 1. create new user, 2. Invite external user.
+
+4. select create new user option and fill the template and press create.
+
+Assigning roles to created user:-
+
+1. Goto ---> Azure active directory ---> USers ---> Select the user ---> Assigned roles ---> Add assignments.
+
+
+Creating the groups :-
+
+Note:- Before creating the groups we have the enable the P2 or enterprise edition.(Choose P2 edition).
+
+---> To enable that we have to goto AAD ---> Manage tab ---> Licenses ---> All products ---> Try/Buy ---> Select and activate
+
+1. Login to azure ---> Goto search and type azure active directory.
+
+2. On leftside we find manage tab on that there is groups option.
+
+3. Open groups tab and we find new group press that.
+
+---> When we press new group this take us to new window. There are four options 1. group Type --> Select security , 2.Group Name ---> Enter the group name, 3. Group description ---> Fill that(This is Optional), 4. Membership Type ---> In this there are three options they are:-  Assigned,Dynamic User,Dynamic device.
+
+---> Now we have to add the dynamic query.
+
+---> After selecting the dynamic query there are some configure rule just fill them.By selecting the Add Expression option. when we done with filling those just give a click on rule syntax then automatically expression is generated. 
+
+
+---> Dynamic query is nothing but we have assign manually.
+
+4. select the save option then the query is saved, If we want to edit dynamic query we can do so.
+
+5. If everything is fine then select the create option then new group is created.
