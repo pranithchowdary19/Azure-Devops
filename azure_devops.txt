@@ -64,3 +64,140 @@ Note:- Before creating the groups we have the enable the P2 or enterprise editio
 4. select the save option then the query is saved, If we want to edit dynamic query we can do so.
 
 5. If everything is fine then select the create option then new group is created.
+
+
+Creating the new tenent(AAD):-
+
+1. Login to azure and goto AAD on top we find manage tenants.
+
+2. Press manage tenants, It takes us to new window on top we find create option select that one.After entering into that we find select tenant type 1. Azure active directory, 2. Azure active directory(B2C).  B2C ---> Business to  customer
+
+3. Fill the given template and press create then one captcha pops up and enter that and submit.
+
+---> To switch to that created tenant(New directory)
+
+---> profile ---> Switch directory ---> there you can see the status.
+
+
+Creating the storage:-
+
+1. Login to azure goto search bar and find for disks.
+
+2. Select create option, It takes us to new window there are several tab
+
+---> Basics 
+---> Encryption
+---> Networking
+---> Advanced
+---> Tags
+---> Review + Create
+
+Resource group :- A resource group is a container that holds related resources for an Azure solution.The resource group can include all the resources for the solution, or only those resources that you want to manage as a group.
+
+3. We need to fill all mandatory tabs.
+
+4. After completing that just press create, It will take some time and created.
+
+
+If we want to increase the storage capacity:-
+
+1. Goto resources ---> Size+Performance ---> There we can select the requried storage capacity.
+
+
+How many ways we can provision(Create) our azure resources.
+
+1. UI level (Portal)
+2. CLI (Cloud shell --->Bash,powershell)
+3. ARM ---> Azure resource manager
+4. IAC ---> Infrastructure as a code (Terraform)
+
+Note :- CLI and ARM are semi automations, IAC is fully automation.
+
+
+Roles and Policies :-
+
+RBAC :- Role Based Access Control.
+
+---> RBAC has two types :-
+1. Pre-Built
+2. Custom ---> If the Azure built-in roles don't meet the specific needs of your organization, you can create your own custom roles.
+
+---> Azure hierarchy :- The root subscripton ---> Management Group ---> Subscription ---> from subscription there have own azure resources.
+
+RBAC Custom Roles Creation :-
+
+---> RBAC Custom roles are written in json format.
+
+---> This json file we can get that from microsoft docs.
+
+1. Login to azure portal and search for management groups.
+
+2. Create a new group.
+
+3. Now goto microsoft and get the requried json file.
+
+4. Open that file and enter your subscription Id and newly management group name.
+
+5. Open cloud shell and upload the json file.
+
+6. Check where the file is located and use this command.
+
+Syntax :- New-AzRoledefinition -Inputfile "Enter the location of that file"
+
+Eg :- New-Azroledefinition -Inputfile /home/revenge/customrole.json
+
+
+Now we have to assign the role to user:-
+
+1. Create a new user.
+
+2. Goto Management groups ---> Select your group ---> On leftside we find IAM(Identity access management).
+
+3. There we find add role assignment option by clicking that we can go to another window and search tab will appear there we have to give the name. (Name means in json file we give the role name at first that name we have paste here and search for.)
+
+4. Select that role ---> add the member(User) ---> Review + Assign.
+
+Check the role is assigned or not :-
+
+---> Login to that newly created user.
+
+---> Search for Help + Support 
+
+---> If we successfully raised the ticket that role is assigned.
+
+
+AAD roles ---> AAD roles is for administration purpose.
+
+RBAC Roles ---> RBAC roles is for azure resources access.
+
+
+
+ARM :- Azure resource manager
+
+What is ARM template structure?
+
+1. Schema
+2. Parameter :- Under this session we have resource information
+3. Variables :- Under this VM extensions,nic,firewall rules,subnets etc.
+4. Functions :-
+5. Resources :-
+
+Creating the Virtual Machine :-
+
+---> There are some types of vm's (VM ---> family)
+
+1. Memory
+2. General Purpose
+3. Graphical
+4. Database
+5.
+
+1. Login to azure portal and search for virtual machines.
+
+2. On top we find create option select that, Now now window pops up fill the requried details.
+
+Creating the multiple VM's Using ARM Templates :-
+
+1. We can download the ARM template from microsoft docs. In that we can change the names.
+
+
